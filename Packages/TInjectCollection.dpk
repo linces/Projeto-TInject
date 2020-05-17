@@ -22,10 +22,11 @@
 ####################################################################################################################
 }
 
+
+
 package TInjectCollection;
 
 {$R *.res}
-{$R *.dres}
 {$R *.dcr}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
@@ -76,9 +77,6 @@ requires
   VclSmp;
 
 contains
-  uTInject.FrmConfigNetWork in '..\Source\View\uTInject.FrmConfigNetWork.pas' {FrmConfigNetWork},
-  uTInject.Console in '..\Source\View\uTInject.Console.pas' {FrmConsole},
-  uTInject.FrmQRCode in '..\Source\View\uTInject.FrmQRCode.pas' {FrmQRCode},
   uTInject.ConfigCEF in '..\Source\Services\uTInject.ConfigCEF.pas',
   uTInject in '..\Source\Services\uTInject.pas',
   uTInject.languages in '..\Source\Services\uTInject.languages.pas',
@@ -91,8 +89,7 @@ contains
   uTInject.Emoticons in '..\Source\Model\uTInject.Emoticons.pas',
   uTInject.ExePath in '..\Source\Model\uTInject.ExePath.pas',
   uTInject.JS in '..\Source\Model\uTInject.JS.pas',
-  uCSV.Import in '..\Source\Model\uCSV.Import.pas'
-  {u_principal in '..\Demo\u_principal.pas' {frmPrincipal };
+  uCSV.Import in '..\Source\Model\uCSV.Import.pas' {u_principal in '..\Demo\u_principal.pas' {frmPrincipal};
 
 end.
 

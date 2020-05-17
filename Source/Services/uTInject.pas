@@ -17,13 +17,13 @@
 ####################################################################################################################
   Autor........:
   Email........:
-  Data.........:
-  Identificador:
-  Modificação..:
+  Data.........: 17/05/2020
+  Identificador: Habilitando o desenvolvimento com unigui
+  Modificação..: Linces Marques
 ####################################################################################################################
 }
 
-
+{$define tinject_unigui} // Comente essa linha caso não esteja utilizando unigui
 
 
 unit uTInject;
@@ -32,12 +32,12 @@ interface
 
 uses
   uTInject.Classes, uTInject.constant, uTInject.Emoticons, uTInject.Config,
-  uTInject.JS, uTInject.Console,
+  uTInject.JS,{$ifndef tinject_unigui} uTInject.Consoleu {$else} uTInject.Console {$endif},
   uTInject.languages,
   uTInject.AdjustNumber, UBase64,
 
   System.SysUtils, System.Classes, Vcl.Forms, Vcl.Dialogs, System.MaskUtils,
-  System.UiTypes,  Generics.Collections,   System.TypInfo, Data.DB, Vcl.ExtCtrls,
+  System.UiTypes,  Generics.Collections, System.TypInfo, Data.DB, Vcl.ExtCtrls,
    uTInject.Diversos;
 
 
